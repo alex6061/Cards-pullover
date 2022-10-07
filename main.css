@@ -1,0 +1,295 @@
+@charset "UTF-8";
+.container {
+  max-width: 1346px;
+  margin: 0 auto; }
+  @media screen and (max-width: 1336px) {
+    .container {
+      max-width: 1336px; } }
+  @media screen and (max-width: 1016px) {
+    .container {
+      max-width: 66px; } }
+  @media screen and (max-width: 684px) {
+    .container {
+      max-width: 332px; } }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+ul[class],
+ol[class] {
+  padding: 0; }
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0; }
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'futura',Arial, sans-serif; }
+
+ul[class],
+ol[class] {
+  list-style: none; }
+
+a:not([class]) {
+  text-decoration-skip-ink: auto; }
+
+img {
+  max-width: 100%;
+  display: block; }
+
+article > * + * {
+  margin-top: 1em; }
+
+input,
+button,
+textarea,
+select {
+  font: inherit; }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; } }
+@font-face {
+  src: url("../fonts/FuturaPT-ExtraBold.woff2"), url("../fonts/FuturaPT-ExtraBold.woff");
+  font-family: 'futura', Arial, sans-serif;
+  font-weight: 900; }
+@font-face {
+  src: url("../fonts/FuturaPTCond-Bold.woff2"), url("../fonts/FuturaPTCond-Bold.woff");
+  font-family: 'futura', Arial, sans-serif;
+  font-weight: 800; }
+@font-face {
+  src: url("../fonts/FuturaPT-Heavy.woff2"), url("../fonts/FuturaPT-Heavy.woff");
+  font-family: 'futura';
+  font-style: normal;
+  font-weight: 700; }
+@font-face {
+  src: url("../fonts/FuturaPT-Light.woff2"), url("../fonts/FuturaPT-Light.woff");
+  font-family: 'futura';
+  font-style: normal;
+  font-weight: 600; }
+@font-face {
+  src: url("../fonts/FuturaPT-Demi.woff2"), url("../fonts/FuturaPT-Demi.woff");
+  font-family: 'futura';
+  font-style: normal;
+  font-weight: 500; }
+@font-face {
+  src: url("../fonts/FuturaPT-Medium.woff2"), url("../fonts/FuturaPT-Medium.woff");
+  font-family: 'futura';
+  font-style: normal;
+  font-weight: 400; }
+.photo {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 70px; }
+
+.photo__item {
+  position: relative;
+  max-width: 100%;
+  width: 100%; }
+
+.photo__wrapper {
+  display: grid;
+  padding: 0 5px;
+  grid-row-gap: 20px; }
+  @media screen and (min-width: 684px) {
+    .photo__wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 0 10px; } }
+  @media screen and (min-width: 1016px) {
+    .photo__wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 0 10px; } }
+  @media screen and (min-width: 1346px) {
+    .photo__wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding: 0 10px; } }
+
+.photo__sale {
+  top: 14px;
+  left: 19px;
+  position: absolute;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #d01345;
+  box-shadow: 1px 3px 4px -1px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  padding: 3px 6px; }
+
+.photo__img {
+  width: 100%;
+  height: 444px; }
+
+.photo__item:hover .photo__overlay {
+  visibility: visible;
+  transition: 8s;
+  transform: translateY(0); }
+.photo__item:hover .photo__inner {
+  background-color: white; }
+.photo__item:hover:before {
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 6; }
+
+.photo__title {
+  margin: 10px 0 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: #2D2D2D; }
+
+.photo__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline; }
+
+.photo__price {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px; }
+  .photo__price.photo__price:first-child {
+    display: flex;
+    justify-content: flex-end;
+    align-self: end;
+    margin-top: auto; }
+
+.photo__price-old {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2D2D2D;
+  opacity: 0.7;
+  text-decoration-line: line-through;
+  font-family: 'futura', Arial, sans-serif; }
+
+.photo__price-new {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'futura',Arial, sans-serif;
+  font-weight: 700;
+  color: #D01345; }
+
+.wrapper--item__heart {
+  background-image: url("../img/svg/heart (3).svg");
+  width: 23px;
+  height: 20px;
+  background-size: cover;
+  position: absolute;
+  margin-left: 296px;
+  margin-top: 402px; }
+  .wrapper--item__heart:active {
+    background-image: url("../img/svg/red-heart.svg");
+    transition: 250ms; }
+
+.hover-image-scale {
+  display: inline-block;
+  overflow: hidden;
+  /* Скрываем всё за контуром */ }
+
+.hover-image-scale img {
+  transition: 1s;
+  /* Время эффекта */
+  display: block; }
+
+.hover-image-scale img:hover {
+  transform: scale(1.2);
+  /* Увеличиваем масштаб */ }
+
+.photo__overlay {
+  left: -15px;
+  width: 362px;
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px 10px 10px;
+  background: white;
+  z-index: 11;
+  transition: 0.3s; }
+
+.overlay__list {
+  display: flex;
+  justify-content: space-between; }
+
+.overlay__text {
+  font-family: "Futura PT",Arial,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  color: #2D2D2D;
+  opacity: 0.6;
+  margin-bottom: 7px; }
+
+.overlay__item {
+  font-family: 'futura', Arial, sans-serif;
+  color: #2D2D2D;
+  font-size: 19px;
+  text-decoration: none;
+  font-weight: 500; }
+  .overlay__item:hover, .overlay__item :active {
+    color: #d01345; }
+
+.overlay__link {
+  text-decoration: none;
+  font-family: 'futura', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: #2D2D2D; }
+
+.overlay__button {
+  font-family: 'futura', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border: none;
+  background: #2D2D2D;
+  padding: 12px 18px; }
+  .overlay__button:hover {
+    color: white;
+    transition: 250ms;
+    background: #d01345; }
+
+/*# sourceMappingURL=main.css.map */
